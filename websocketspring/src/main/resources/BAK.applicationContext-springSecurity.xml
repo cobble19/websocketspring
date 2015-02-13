@@ -1,0 +1,79 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<security:http pattern="/bootstrap/**" security="none" />
+	<security:http pattern="/images/**" security="none" />
+	<security:http pattern="/jquery/**" security="none" />
+	
+	<security:http pattern="/mgr/ta/app/**" security="none" />
+	<security:http pattern="/mgr/ta/build/**" security="none" />
+	<security:http pattern="/mgr/ta/ext/**" security="none" />
+	<security:http pattern="/mgr/ta/overrides/**" security="none" />
+	<security:http pattern="/mgr/ta/packages/**" security="none" />
+	<security:http pattern="/mgr/ta/resources/**" security="none" />
+	<security:http pattern="/mgr/ta/sass/**" security="none" />
+	<security:http pattern="/mgr/ta/*.json" security="none" />
+	
+	<security:http pattern="/mgr/data/**" security="none" />
+	<security:http pattern="/page/**" security="none" />
+	<security:http pattern="/index*" security="none" />
+	<security:http pattern="/index.jsp" security="none" />
+	<security:http pattern="/web/**" security="none" />
+	<security:http pattern="/redirect.html" security="none" />
+	<security:http pattern="/**/*.js" security="none"></security:http>
+	<security:http pattern="/**/*.css" security="none"></security:http>
+	<security:http pattern="/**/*.gif" security="none"></security:http>
+	<security:http pattern="/**/*.jpg" security="none"></security:http>
+	<security:http pattern="/**/*.jpeg" security="none"></security:http>
+	<security:http pattern="/**/*.png" security="none"></security:http>
+	<security:http pattern="/css/**" security="none" />
+	<security:http pattern="/js/**" security="none" />
+	<security:http pattern="/*.icon" security="none" />
+	<security:http pattern="/**/*.icon" security="none" />
+	
+	<security:http pattern="/files/**" security="none" />
+	<!-- <security:http pattern="/**/*.html" security="none"></security:http> -->
+	
+	<!-- <security:http pattern="/login.jsp*" security="none" /> -->
+	<!-- <security:http pattern="/mgr/**" security="none" /> -->
+	
+	<security:http>
+		<!-- <security:intercept-url pattern="/**" access="ROLE_USER" /> -->
+		<security:form-login always-use-default-target="true" default-target-url="/mgr/ta/index.html"/>
+		<security:logout />
+		<!-- <security:custom-filter ref="myFilterSecurity" before="FILTER_SECURITY_INTERCEPTOR"/> -->
+	</security:http>
+	
+	<!-- <bean name="myFilterSecurity" class="com.cobble.takeaway.spring.security.MyFilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager"></property>
+		<property name="accessDecisionManager" ref="myAccessDecisionManager"></property>
+		<property name="securityMetadataSource" ref="myFilterInvocationSecurityMetadataSource"></property>
+		<property name="rejectPublicInvocations" value="true"></property>
+	</bean>
+	
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider user-service-ref="myUserDetailsService">
+			<security:user-service>
+				<security:user name="admin" password="adminpassword" authorities="ROLE_USER, ROLE_ADMIN" />
+				<security:user name="ge" password="gepassword" authorities="ROLE_USER, ROLE_ADMIN" />
+				<security:user name="bang" password="bangpassword" authorities="ROLE_USER" />
+			</security:user-service>
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+	<bean name="myUserDetailsService" class="com.cobble.takeaway.spring.security.MyUserDetailsService">
+	</bean>
+	
+	<bean name="myAccessDecisionManager" class="com.cobble.takeaway.spring.security.MyAccessDecisionManager">
+	</bean>
+	
+	<bean name="myFilterInvocationSecurityMetadataSource" class="com.cobble.takeaway.spring.security.MyFilterInvocationSecurityMetadataSource">
+	</bean> -->
+   
+   
+</beans>

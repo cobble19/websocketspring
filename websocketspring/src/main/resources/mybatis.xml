@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+		<setting name="lazyLoadingEnabled" value="true" />
+		<setting name="aggressiveLazyLoading" value="false" />
+		<setting name="multipleResultSetsEnabled" value="true" />
+		<setting name="useColumnLabel" value="true" />
+		<setting name="useGeneratedKeys" value="true" />
+		<setting name="autoMappingBehavior" value="FULL" />
+		<setting name="defaultExecutorType" value="BATCH" />
+		<setting name="defaultStatementTimeout" value="25000" />
+	</settings>
+	<!-- to see applicationContext.xml (typeAliasesPackage) -->
+	<!-- <typeAliases>
+		<typeAlias alias="UserPOJO"
+			type="com.cobble.pojo.UserPOJO" />
+	</typeAliases> -->
+	<!-- <mappers>
+		<mapper resource="mybatis-config/FoodMapper.xml" />
+		<mapper resource="mybatis-config/FoodMenuMapper.xml" />
+		<mapper resource="mybatis-config/FoodSellerMapper.xml" />
+		<mapper resource="mybatis-config/FoodSellerTypeMapper.xml" />
+		<mapper resource="mybatis-config/FoodTypeMapper.xml" />
+		<mapper resource="mybatis-config/LocationAreaMapper.xml" />
+		<mapper resource="mybatis-config/LocationBusinessMapper.xml" />
+		<mapper resource="mybatis-config/OrderFormFoodMapper.xml" />
+		<mapper resource="mybatis-config/OrderFormMapper.xml" />
+		
+		<mapper resource="mybatis-config/UserMapper.xml" />
+		<mapper resource="mybatis-config/RoleMapper.xml" />
+		<mapper resource="mybatis-config/PrivilegeMapper.xml" />
+		<mapper resource="mybatis-config/RelPrivilegeRoleMapper.xml" />
+		<mapper resource="mybatis-config/RelUserRoleMapper.xml" />
+		<mapper resource="mybatis-config/RecommendMapper.xml" />
+	</mappers> -->
+</configuration>
