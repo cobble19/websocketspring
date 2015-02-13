@@ -8,6 +8,7 @@
 	<name>websocket Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<build>
+	
 		<finalName>websocket</finalName>
 		<plugins>
 			<plugin>
